@@ -1,0 +1,814 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+
+/* ============================
+             WRAPPER
+   ============================
+*/
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    /* grid-template-rows: auto auto auto; */
+
+}
+
+/* ============================
+         HERO SECTION
+   ============================
+*/
+
+
+/* ============================
+     HERO SAME VALUES
+   ============================
+*/
+.hero-logo,
+.hero-login li {
+    padding: 5%;
+}
+
+
+/* ============================
+     White Space of Polygon Fill
+   ============================
+*/
+
+.polygon-fill-hero-color {
+    background: white;
+}
+
+
+/* ============================
+      HERO SECTION CHANGES
+   ============================
+*/
+.hero {
+    background: rgb(40, 35, 133);
+    background: linear-gradient(90deg, rgba(40, 35, 133, 1) 25%, rgba(187, 184, 250, 1) 100%);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-rows: repeat(2, auto);
+    /* rows nie jest niezbedne */
+    /* grid-template-rows: auto auto; */
+    grid-template-areas: "hero-logo hero-logo .  . hero-login""hero-mainTitle hero-mainTitle . hero-image hero-image ";
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    padding: 3% 5% 12%;
+
+    color: white;
+
+
+}
+
+
+/* ============================
+        HERO LOGO SECTION
+   ============================
+*/
+.hero-logo {
+    grid-area: hero-logo;
+    /* background: green; */
+    /* padding: 5% 5% 10%; */
+    /* padding: 5%; */
+
+
+}
+
+/* ============================
+        HERO LOGIN SECTION
+   ============================
+*/
+.hero-login {
+    grid-area: hero-login;
+    /* background: orange; */
+    white-space: nowrap;
+}
+
+/* ============================
+    HERO LOGIN LIST (MINI MENU)
+   ============================
+*/
+
+.hero-login a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero-login ul {
+    display: flex;
+    list-style: none;
+}
+
+.hero-login li {
+    margin: 0 auto;
+    /* padding: 5%; */
+}
+
+.hero-login li:nth-child(2) {
+    /* border: 1px solid white; */
+    background: hsl(163, 95%, 43%);
+    padding: 5% 10%;
+}
+
+
+/* ============================
+     HERO MAIN TITLE SECTION
+   ============================
+*/
+.hero-mainTitle {
+    grid-area: hero-mainTitle;
+    /* background: pink; */
+    padding: 0% 5%;
+
+
+}
+
+.hero-mainTitle h1 {
+    font-size: 2.18rem;
+    padding-top: 25%;
+    margin-bottom: 5%;
+}
+
+/* ============================
+     HERO MAIN TITLE BUTTON
+   ============================
+*/
+
+.heroGetStartedButton {
+    background-color: hsl(163, 95%, 43%);
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid hsl(163, 95%, 43%);
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 1rem;
+    padding: 1rem 4.375rem;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+}
+
+.heroGetStartedButton:hover {
+    background-color: #5cbf2a;
+}
+
+.heroGetStartedButton:active {
+    position: relative;
+    top: 1px;
+}
+
+
+/* ============================
+     HERO IMAGE SECTION
+   ============================
+*/
+
+.hero-image {
+    grid-area: hero-image;
+    /* background: brown; */
+    margin-right: 10%;
+}
+
+/* ============================
+     HERO IMG CHANGES
+   ============================
+*/
+.illustration-hero {
+    width: 100%;
+}
+
+
+
+/* ============================
+     INFORMATIONS SECTION
+   ============================
+*/
+
+
+/* ============================
+     White Space of Polygon Fill
+   ============================
+*/
+
+.polygon-fill-informations-color {
+    background-color: hsl(243, 87%, 12%);
+}
+
+
+/* ============================
+   INFORMATIONS SECTION CHANGES
+   ============================
+*/
+
+.informations {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-rows: repeat(3, auto);
+    /* grid-template-rows: auto auto auto; */
+    grid-template-areas: "informations-heading informations-heading informations-heading""informations-image informations-left informations-right""early-access early-access early-access";
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 92%);
+    padding: 3% 5% 12%;
+    /* position relative jest zastosowany w celu przesuniecia skcji informations troche wyzej aby kolor polygon-fill-informations-color zaslonic, bo inaczej te tlo da na samej gorze linie koloru podanego w tej klasie  */
+    position: relative;
+    bottom: .5px;
+
+}
+
+/* ============================
+   INFORMATIONS HEADING SECTION
+   ============================
+*/
+.informations-heading {
+    grid-area: informations-heading;
+    font-size: 2.18rem;
+    text-align: center;
+}
+
+/* ============================
+   INFORMATIONS IMAGE SECTION
+   ============================
+*/
+
+.informations-image {
+    grid-area: informations-image;
+    /* background: red; */
+    padding: 5%;
+}
+
+/* ==============================
+   INFORMATIONS IMAGE IMG CHANGES
+   ==============================
+*/
+
+.illustration-features {
+    width: 100%;
+}
+
+/* ============================
+   INFORMATIONS LEFT SECTION
+   ============================
+*/
+
+.informations-left {
+    grid-area: informations-left;
+    /* background: yellow; */
+    /* padding: 5% 13%; */
+}
+
+.informations-first-p {
+    padding-bottom: 15%;
+}
+
+/* ============================
+   INFORMATIONS RIGHT SECTION
+   ============================
+*/
+.informations-right {
+    grid-area: informations-right;
+    /* background: blue; */
+    /* padding: 5% 13%; */
+}
+
+
+/* ===================================
+   INFORMATIONS LEFT RIGHT SAME VALUES
+   ===================================
+*/
+.informations-left,
+.informations-right {
+    padding: 5% 13%;
+}
+
+.informations-left h1,
+.informations-right h1 {
+    font-size: 1.1rem;
+}
+
+/* =======================
+   EARLY ACCESS SECTION
+   =======================
+*/
+
+.early-access {
+    grid-area: early-access;
+    text-align: center;
+    padding: 5% 0 8%;
+    /* padding-top: 5%;
+    padding-bottom: 8%; */
+}
+
+.early-access h1 {
+    font-size: 2.18rem;
+
+}
+
+.early-access p {
+    width: 50%;
+    margin: auto;
+}
+
+/* =======================
+   EARLY ACCESS FORM
+   =======================
+*/
+.early-access-form {
+    padding-top: 2%;
+}
+
+/* =============================
+   EARLY ACCESS INPUT AND BUTTON
+   =============================
+*/
+
+/* =========================================
+   EARLY ACCESS INPUT AND BUTTON SAME VALUES
+   =========================================
+*/
+
+.early-access-input-email,
+.early-access-join-button,
+.receive-updates-input-email,
+.receive-updates-join-button {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 1rem 4.375rem;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 1%;
+}
+
+/* =============================
+   EARLY ACCESS INPUT
+   =============================
+*/
+.early-access-input-email,
+.receive-updates-input-email {
+    background-color: white;
+    border: 1px solid white;
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* =============================
+   EARLY ACCESS INPUT BUTTON
+   =============================
+*/
+.early-access-join-button,
+.receive-updates-join-button {
+    background-color: hsl(163, 95%, 43%);
+    border: 1px solid hsl(163, 95%, 43%);
+    text-shadow: 0px 1px 0px #2f6627;
+}
+
+.early-access-join-button:hover,
+.receive-updates-join-button:hover {
+    background-color: #5cbf2a;
+}
+
+.early-access-join-button:active {
+    position: relative;
+    top: 1px;
+}
+
+
+
+/* =============================
+   FOOTER SECTION
+   =============================
+*/
+
+
+.footer {
+    background: hsl(243, 87%, 12%);
+    color: white;
+    padding: 3% 5% 12%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-rows: auto;
+    grid-template-areas: "social fylo-column company-column support-column receive-updates receive-updates"
+}
+
+.footer ul {
+    list-style: none;
+    ;
+}
+
+/* =============================
+   SOCIAL SECTION
+   =============================
+*/
+.social {
+    grid-area: social;
+    /* background: #2f6627; */
+}
+
+.social ul {
+    padding: 0;
+}
+
+.social li {
+    padding: 5% 1%;
+    display: flex;
+}
+
+.phone-icon,
+.email-icon {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    padding-right: 3%;
+}
+
+.phone-icon {
+    padding-top: 8.5%;
+}
+
+.email-icon {
+    padding-top: 1.5%;
+}
+
+
+
+/* =================================================
+   FYLO, COMPANY, SUPPORT COLUMN SECTION SAME VALUES
+   =================================================
+*/
+.fylo-column ul,
+.company-column ul,
+.support-column ul {
+    margin: 0;
+}
+
+.fylo-column li:first-child,
+.company-column li:first-child,
+.support-column li:first-child {
+    font-weight: 900;
+    margin-bottom: 10%;
+}
+
+.fylo-column li,
+.company-column li,
+.support-column li {
+    margin: 5%;
+}
+
+/* =============================
+   FYLO SECTION
+   =============================
+*/
+.fylo-column {
+    grid-area: fylo-column;
+    /* background: red; */
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    border-color: white;
+}
+
+/* =============================
+   COMPANY SECTION
+   =============================
+*/
+.company-column {
+    grid-area: company-column;
+    /* background: yellow; */
+}
+
+/* =============================
+   SUPPORT SECTION
+   =============================
+*/
+.support-column {
+    grid-area: support-column;
+    /* background: cyan; */
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+    border-color: white;
+}
+
+/* =============================
+   RECEIVE UPDATES SECTION
+   =============================
+*/
+.receive-updates {
+    grid-area: receive-updates;
+    /* background: brown; */
+    padding: 0 5%;
+    margin: 0 0 0 10%
+}
+
+.receive-updates-p {
+    /* padding: 0 5%;
+    margin: 0 0 0 10%; */
+}
+
+/* =============================
+   RECEIVE UPDATES FORM
+   =============================
+*/
+
+
+/* .receive-updates-form {
+    /* display: flex; to wyrownuje tak ladnie input i buttona przy sobie tak jak w przykladzie ze strzalka co zrobilem za pomoca after i before */
+.receive-updates-form {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+
+}
+
+.receive-updates-input-email {
+    display: flex;
+    text-align: left;
+    margin: 0;
+    padding: 1rem 5%;
+    width: 89%;
+    /* padding: 1rem 1rem; */
+    /* padding-right: 8rem; */
+}
+
+.receive-updates-join-button {
+    float: right;
+    margin-top: 3%;
+    /* margin-right: 1.5rem; */
+}
+
+
+
+/* margin: 0;
+padding: 1rem 0;
+width: 100%; */
+
+
+
+/* ============================
+     MEDIA QUERIES
+   ============================
+*/
+
+@media (max-width:864px) {
+    .hero {
+        grid-template-rows: repeat(2, auto);
+        /* grid-template-rows: auto auto; */
+        grid-template-areas: "hero-logo hero-logo .  . hero-login""hero-image hero-image hero-image hero-image hero-image""hero-mainTitle hero-mainTitle hero-mainTitle hero-mainTitle hero-mainTitle ";
+        padding: 3% 5% 22%;
+    }
+
+    .hero-login {
+        white-space: nowrap;
+    }
+
+    .hero-image {
+        margin: 0 auto;
+    }
+
+    .hero-mainTitle {
+
+        text-align: center;
+    }
+
+    .hero-mainTitle h1 {
+        font-size: 2.18rem;
+        padding-top: 0%;
+        margin-bottom: 5%;
+    }
+
+    /* ============================
+     INFORMATIONS SECTION
+   ============================
+*/
+    .informations {
+        /* grid-template-areas: ". informations-heading .""informations-image informations-left informations-right""early-access early-access early-access"; */
+
+        grid-template-areas: ". informations-heading .""informations-image informations-image informations-image""informations-left informations-left informations-left""informations-right informations-right informations-right""early-access early-access early-access";
+        padding: 3% 5% 30%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
+    }
+
+    /* ============================
+   INFORMATIONS HEADING SECTION
+   ============================
+*/
+    .informations-heading {
+        line-height: 1.6;
+    }
+
+    /* =========================================
+   INFORMATIONS LEFT AND RIGHT SECTION FIRST P
+   ===========================================
+   */
+    .informations-first-p {
+        padding-bottom: 1%;
+    }
+
+    /* ===================================
+   INFORMATIONS LEFT AND RIGHT SECTION
+   ==================================
+*/
+    .informations-left,
+    .informations-right {
+        padding: 1%;
+        /* margin: 0 25%; */
+    }
+
+    .informations-left p,
+    .informations-right p {
+        width: 60%;
+
+    }
+
+    /* =================
+   INFORMATIONS IMAGE
+   =====================
+*/
+    .informations-image {
+        /* padding: 1%; */
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    /* ================================
+       INFORMATIONS EARLY-ACCES SECTION
+       ================================
+    */
+    .early-access h1 {
+        margin: 0;
+        padding: 4% 0;
+
+    }
+
+    .early-access p {
+        padding-bottom: 3%;
+    }
+
+    /* ========================
+        EARLY-ACCES INPUT EMAIL
+       ========================
+    */
+
+    .early-access-input-email {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    /* ========================
+        EARLY-ACCES JOIN BUTTON
+       ========================
+    */
+    .early-access-join-button {
+        margin-top: 2%;
+        padding: 1rem 9.6rem;
+    }
+
+
+
+
+
+    /* ============================
+     Footer SECTION
+   ============================
+    */
+
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+        /* grid-template-columns: 1fr 1fr; */
+        grid-template-rows: repeat(6, auto);
+        /* grid-template-rows: auto auto auto auto auto auto; */
+        /* grid-template-areas: "social fylo-column company-column support-column receive-updates receive-updates" */
+        grid-template-areas: "social social""receive-updates receive-updates""fylo-column fylo-column""company-column company-column""support-column support-column";
+        padding: 3% 10% 30%;
+
+    }
+
+
+    /* =============================================================================
+   SOCIAL, FYLO-COLUMN, COMPANY-COLUMN, SUPPORT-COLUMN SECTION, RECEIVE-UPDATES-FROM
+   =================================================================================
+*/
+    .social,
+    .fylo-column,
+    .company-column,
+    .support-column,
+    .receive-updates {
+        /* padding-left: 25%; */
+    }
+
+    .phone-icon {
+        padding-top: 4%;
+
+    }
+
+    .email-icon {
+        padding-top: 1%;
+    }
+
+    /* ===============================================================
+     FYLO-COLUMN, COMPANY-COLUMN, SUPPORT-COLUMN SECTION SAME VALUES
+   ==================================================================
+    */
+
+    .fylo-column,
+    .company-column,
+    .support-column {
+        border: 0;
+    }
+
+
+    .fylo-column li:first-child,
+    .company-column li:first-child,
+    .support-column li:first-child {
+        font-weight: 900;
+    }
+
+    .fylo-column li:first-child,
+    .company-column li:first-child,
+    .support-column li:first-child,
+    .fylo-column li:last-child,
+    .company-column li:last-child,
+    .support-column li:last-child {
+        margin-bottom: 5%;
+    }
+
+
+    .fylo-column ul,
+    .company-column ul,
+    .support-column ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .fylo-column li,
+    .company-column li,
+    .support-column li {
+        margin: 1% 0 1% 1%;
+    }
+
+    /* ============================
+     RECEIVE-UPDATES SECTION
+   ============================
+    */
+    .receive-updates {
+        grid-area: receive-updates;
+        /* background: brown; */
+        padding-right: 30%;
+        margin: 0%;
+        margin-bottom: 8%;
+    }
+
+    .receive-updates-p {
+        text-align: center;
+        margin: 0;
+        padding-bottom: 10%;
+    }
+
+    /* ============================
+     RECEIVE-UPDATES INPUT EMAIL
+   ============================
+    */
+    .receive-updates-input-email {
+        text-align: center;
+        /* margin: 0 auto; */
+        /* padding: 1rem 2.8rem;
+        margin: auto; */
+        margin: 0;
+        padding: 1rem 0;
+        width: 100%;
+
+    }
+
+    /* ================================
+     RECEIVE-UPDATES JOIN BUTTON SECTION
+   =====================================
+    */
+    .receive-updates-join-button {
+        margin-right: 0%;
+    }
+
+
+}
